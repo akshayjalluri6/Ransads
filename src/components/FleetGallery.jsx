@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Eye, MapPin, Clock } from 'lucide-react';
@@ -7,43 +6,43 @@ const FleetGallery = () => {
   const trucks = [
     {
       id: 1,
-      brand: "TechCorp",
-      location: "Highway 101, California",
+      brand: "Reliance",
+      location: "Mumbai, Maharashtra",
       impressions: "50K",
       duration: "30 days"
     },
     {
       id: 2,
-      brand: "FoodieDelight",
-      location: "Downtown Chicago",
+      brand: "Flipkart",
+      location: "Bengaluru, Karnataka",
       impressions: "75K",
       duration: "45 days"
     },
     {
       id: 3,
-      brand: "FitLife Gym",
-      location: "Interstate 95, Florida",
+      brand: "Swiggy",
+      location: "Hyderabad, Telangana",
       impressions: "60K",
       duration: "60 days"
     },
     {
       id: 4,
-      brand: "EcoClean",
-      location: "Route 66, Arizona",
+      brand: "Tata Motors",
+      location: "Pune, Maharashtra",
       impressions: "40K",
       duration: "30 days"
     },
     {
       id: 5,
-      brand: "StyleHub",
-      location: "Manhattan, New York",
+      brand: "Ola Cabs",
+      location: "Delhi NCR",
       impressions: "90K",
       duration: "90 days"
     },
     {
       id: 6,
-      brand: "AutoMax",
-      location: "I-10, Texas",
+      brand: "Zomato",
+      location: "Gurgaon, Haryana",
       impressions: "65K",
       duration: "45 days"
     }
@@ -132,7 +131,7 @@ const FleetGallery = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-2xl p-8 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-sky-50 to-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 gradient-text">Your Brand Could Be Next</h3>
             <p className="text-gray-600 mb-6">
               Join the mobile advertising revolution and see your brand travel the highways, 

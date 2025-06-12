@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -7,6 +6,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/components/ui/use-toast';
 import { Truck, DollarSign, Shield, Users, Upload, CheckCircle } from 'lucide-react';
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 
 const FleetOnboarding = () => {
   const { toast } = useToast();
@@ -35,28 +36,15 @@ const FleetOnboarding = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Store in localStorage for now
-      const existingApplications = JSON.parse(localStorage.getItem('ransads_fleet_applications') || '[]');
-      const newApplication = {
+      await addDoc(collection(db, 'fleet_submissions'), {
         ...formData,
-        id: Date.now(),
-        timestamp: new Date().toISOString(),
-        status: 'pending'
-      };
-      existingApplications.push(newApplication);
-      localStorage.setItem('ransads_fleet_applications', JSON.stringify(existingApplications));
-
+        timestamp: Timestamp.now()
+      });
       toast({
         title: "Application Submitted Successfully!",
         description: "Our fleet team will review your application and contact you within 48 hours.",
       });
-
-      // Reset form
       setFormData({
         ownerName: '',
         email: '',
@@ -108,12 +96,12 @@ const FleetOnboarding = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl xs:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
             Join Our <span className="gradient-text">Fleet</span> Network
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Turn your truck into a mobile billboard and earn extra revenue. 
-            Join hundreds of truck owners who are already monetizing their routes.
+          <p className="text-base xs:text-lg md:text-xl text-gray-600 max-w-md md:max-w-3xl mx-auto leading-snug md:leading-relaxed">
+            <span className="hidden md:inline">Turn your truck into a mobile billboard and earn extra revenue. Join hundreds of truck owners who are already monetizing their routes.</span>
+            <span className="inline md:hidden">Earn more by advertising on your truck. Join our fleet today!</span>
           </p>
         </motion.div>
 
@@ -127,7 +115,7 @@ const FleetOnboarding = () => {
         >
           {benefits.map((benefit, index) => (
             <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <benefit.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-800">{benefit.title}</h3>
@@ -376,7 +364,7 @@ const FleetOnboarding = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-xl bg-gradient-to-br from-green-500 to-emerald-500 text-white">
+            <Card className="shadow-xl bg-gradient-to-br from-sky-400 to-blue-400 text-white">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4">Earning Potential</h3>
                 <div className="space-y-3">
@@ -406,19 +394,19 @@ const FleetOnboarding = () => {
                 <h3 className="text-xl font-bold mb-4 gradient-text">Next Steps</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-orange-600">1</div>
+                    <div className="w-6 h-6 bg-sky-100 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-sky-600">1</div>
                     <span className="text-gray-700">Submit your application</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-orange-600">2</div>
+                    <div className="w-6 h-6 bg-sky-100 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-sky-600">2</div>
                     <span className="text-gray-700">Background & vehicle verification</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-orange-600">3</div>
+                    <div className="w-6 h-6 bg-sky-100 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-sky-600">3</div>
                     <span className="text-gray-700">Contract signing & onboarding</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-orange-600">4</div>
+                    <div className="w-6 h-6 bg-sky-100 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-sky-600">4</div>
                     <span className="text-gray-700">Start earning with your first campaign</span>
                   </div>
                 </div>

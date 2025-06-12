@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -7,6 +6,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/components/ui/use-toast';
 import { Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -32,28 +33,15 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Store in localStorage for now
-      const existingLeads = JSON.parse(localStorage.getItem('ransads_leads') || '[]');
-      const newLead = {
+      await addDoc(collection(db, 'campaign_submissions'), {
         ...formData,
-        id: Date.now(),
-        timestamp: new Date().toISOString(),
-        status: 'new'
-      };
-      existingLeads.push(newLead);
-      localStorage.setItem('ransads_leads', JSON.stringify(existingLeads));
-
+        timestamp: Timestamp.now()
+      });
       toast({
         title: "Campaign Inquiry Submitted!",
         description: "Our team will contact you within 24 hours to discuss your advertising goals.",
       });
-
-      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -75,7 +63,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-orange-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-sky-50 to-blue-50">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -253,8 +241,8 @@ const ContactForm = () => {
                 <h3 className="text-xl font-bold mb-6 gradient-text">Get In Touch</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-orange-600" />
+                    <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 text-sky-600" />
                     </div>
                     <div>
                       <div className="font-medium text-gray-800">Phone</div>
@@ -264,8 +252,8 @@ const ContactForm = () => {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-5 h-5 text-orange-600" />
+                    <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-5 h-5 text-sky-600" />
                     </div>
                     <div>
                       <div className="font-medium text-gray-800">Email</div>
@@ -275,8 +263,8 @@ const ContactForm = () => {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-orange-600" />
+                    <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-sky-600" />
                     </div>
                     <div>
                       <div className="font-medium text-gray-800">Office</div>
@@ -286,8 +274,8 @@ const ContactForm = () => {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-5 h-5 text-orange-600" />
+                    <div className="w-10 h-10 bg-sky-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-5 h-5 text-sky-600" />
                     </div>
                     <div>
                       <div className="font-medium text-gray-800">Business Hours</div>
@@ -299,7 +287,7 @@ const ContactForm = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-xl bg-gradient-to-br from-orange-500 to-yellow-500 text-white">
+            <Card className="shadow-xl bg-gradient-to-br from-sky-400 to-blue-400 text-white">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4">Quick Response Guarantee</h3>
                 <p className="mb-4">

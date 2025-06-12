@@ -1,12 +1,19 @@
-
 import React from 'react';
 import { Truck, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Footer = () => {
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = (sectionId) => {
+    if (location.pathname === '/' && document.getElementById(sectionId)) {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/', { state: { scrollTo: sectionId } });
     }
   };
 
@@ -17,7 +24,7 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 hero-gradient rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-blue-700 rounded-lg flex items-center justify-center">
                 <Truck className="w-6 h-6 text-white" />
               </div>
               <span className="text-2xl font-bold gradient-text">RansAds</span>
@@ -27,17 +34,17 @@ const Footer = () => {
               to create high-impact, cost-effective marketing campaigns that reach millions.
             </p>
             <div className="flex space-x-4">
-              <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors cursor-pointer">
-                <Facebook className="w-5 h-5" />
+              <div className="w-10 h-10 bg-blue-900 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer">
+                <Facebook className="w-5 h-5 text-white" />
               </div>
-              <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors cursor-pointer">
-                <Twitter className="w-5 h-5" />
+              <div className="w-10 h-10 bg-blue-900 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer">
+                <Twitter className="w-5 h-5 text-white" />
               </div>
-              <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors cursor-pointer">
-                <Instagram className="w-5 h-5" />
+              <div className="w-10 h-10 bg-blue-900 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer">
+                <Instagram className="w-5 h-5 text-white" />
               </div>
-              <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-500 transition-colors cursor-pointer">
-                <Linkedin className="w-5 h-5" />
+              <div className="w-10 h-10 bg-blue-900 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors cursor-pointer">
+                <Linkedin className="w-5 h-5 text-white" />
               </div>
             </div>
           </div>
@@ -47,35 +54,35 @@ const Footer = () => {
             <span className="text-lg font-bold mb-6 block">Quick Links</span>
             <div className="space-y-3">
               <button 
-                onClick={() => scrollToSection('how-it-works')}
-                className="block text-gray-400 hover:text-orange-400 transition-colors"
+                onClick={() => handleNavClick('how-it-works')}
+                className="block text-gray-400 hover:text-blue-500 transition-colors"
               >
                 How It Works
               </button>
               <button 
-                onClick={() => scrollToSection('gallery')}
-                className="block text-gray-400 hover:text-orange-400 transition-colors"
+                onClick={() => handleNavClick('gallery')}
+                className="block text-gray-400 hover:text-blue-500 transition-colors"
               >
                 Fleet Gallery
               </button>
               <button 
-                onClick={() => scrollToSection('pricing')}
-                className="block text-gray-400 hover:text-orange-400 transition-colors"
+                onClick={() => handleNavClick('pricing')}
+                className="block text-gray-400 hover:text-blue-500 transition-colors"
               >
                 Pricing Plans
               </button>
               <button 
-                onClick={() => scrollToSection('contact')}
-                className="block text-gray-400 hover:text-orange-400 transition-colors"
+                onClick={() => handleNavClick('contact')}
+                className="block text-gray-400 hover:text-blue-500 transition-colors"
               >
                 Start Campaign
               </button>
-              <button 
-                onClick={() => scrollToSection('fleet-onboarding')}
-                className="block text-gray-400 hover:text-orange-400 transition-colors"
+              <Link 
+                to="/fleet"
+                className="block text-gray-400 hover:text-blue-500 transition-colors"
               >
                 Join Our Fleet
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -83,12 +90,12 @@ const Footer = () => {
           <div>
             <span className="text-lg font-bold mb-6 block">Services</span>
             <div className="space-y-3">
-              <span className="block text-gray-400">Local Campaigns</span>
-              <span className="block text-gray-400">Regional Advertising</span>
-              <span className="block text-gray-400">National Coverage</span>
-              <span className="block text-gray-400">Custom Solutions</span>
-              <span className="block text-gray-400">Analytics & Reporting</span>
-              <span className="block text-gray-400">Fleet Management</span>
+              <Link to="/services/local-campaigns" className="block text-gray-400 hover:text-blue-500 transition-colors">Local Campaigns</Link>
+              <Link to="/services/regional-advertising" className="block text-gray-400 hover:text-blue-500 transition-colors">Regional Advertising</Link>
+              <Link to="/services/national-coverage" className="block text-gray-400 hover:text-blue-500 transition-colors">National Coverage</Link>
+              <Link to="/services/custom-solutions" className="block text-gray-400 hover:text-blue-500 transition-colors">Custom Solutions</Link>
+              <Link to="/services/analytics-reporting" className="block text-gray-400 hover:text-blue-500 transition-colors">Analytics & Reporting</Link>
+              <Link to="/services/fleet-management" className="block text-gray-400 hover:text-blue-500 transition-colors">Fleet Management</Link>
             </div>
           </div>
 

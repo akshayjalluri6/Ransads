@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MessageSquare, Target, Truck, BarChart3 } from 'lucide-react';
@@ -9,25 +8,25 @@ const HowItWorks = () => {
       icon: MessageSquare,
       title: "Share Your Vision",
       description: "Tell us about your brand, target audience, and campaign goals. Our team will craft the perfect strategy for maximum impact.",
-      color: "bg-orange-500"
+      color: "bg-sky-500"
     },
     {
       icon: Target,
       title: "Design & Target",
       description: "We create stunning ad designs and select optimal routes based on your target demographics and geographic preferences.",
-      color: "bg-yellow-500"
+      color: "bg-blue-500"
     },
     {
       icon: Truck,
       title: "Deploy & Drive",
       description: "Your ads hit the road on our premium truck fleet, reaching millions of potential customers across cities and highways.",
-      color: "bg-orange-600"
+      color: "bg-sky-600"
     },
     {
       icon: BarChart3,
       title: "Track & Optimize",
       description: "Monitor real-time performance with detailed analytics including impressions, reach, and engagement metrics.",
-      color: "bg-yellow-600"
+      color: "bg-blue-700"
     }
   ];
 
@@ -62,7 +61,7 @@ const HowItWorks = () => {
             >
               <div className="bg-white rounded-2xl p-8 shadow-lg card-hover text-center relative overflow-hidden">
                 {/* Background Pattern */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-orange-100 to-yellow-100 rounded-full -translate-y-10 translate-x-10 opacity-50"></div>
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-sky-100 to-blue-100 rounded-full -translate-y-10 translate-x-10 opacity-50"></div>
                 
                 {/* Step Number */}
                 <div className="absolute top-4 left-4 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-sm font-bold text-gray-600">

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Play, TrendingUp, Users, MapPin } from 'lucide-react';
@@ -13,7 +12,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-pattern">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-pattern pt-24 md:pt-0">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img  
@@ -46,19 +45,19 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-5xl md:text-7xl font-black text-white mb-6 text-shadow">
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl font-black text-white mb-4 md:mb-6 text-shadow leading-tight md:leading-tight">
             Transform Your Brand Into
-            <span className="block text-yellow-300">Mobile Billboards</span>
+            <span className="block gradient-text">Mobile Billboards</span>
           </h1>
           
           <motion.p 
-            className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-base xs:text-lg md:text-2xl text-white/90 mb-6 md:mb-8 max-w-md md:max-w-3xl mx-auto leading-snug md:leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Reach millions of potential customers with high-impact truck advertising. 
-            Your message travels the highways, cities, and everywhere your audience goes.
+            <span className="hidden md:inline">Reach millions of potential customers with high-impact truck advertising. Your message travels the highways, cities, and everywhere your audience goes.</span>
+            <span className="inline md:hidden">Advertise on trucks. Reach more people, everywhere they go.</span>
           </motion.p>
 
           <motion.div 
@@ -69,7 +68,7 @@ const Hero = () => {
           >
             <Button 
               size="lg" 
-              className="bg-white text-orange-600 hover:bg-gray-100 text-lg px-8 py-4 rounded-full font-bold shadow-2xl"
+              className="bg-white text-sky-600 hover:bg-sky-50 text-lg px-8 py-4 rounded-full font-bold shadow-2xl"
               onClick={() => scrollToSection('contact')}
             >
               Start Your Campaign
@@ -78,7 +77,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-orange-600 text-lg px-8 py-4 rounded-full font-bold"
+              className="border-white text-white hover:bg-white hover:text-sky-600 text-lg px-8 py-4 rounded-full font-bold"
               onClick={() => scrollToSection('how-it-works')}
             >
               <Play className="mr-2 w-5 h-5" />

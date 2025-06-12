@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -105,15 +104,15 @@ const Pricing = () => {
             >
               {/* Popular Badge */}
               {plan.popular && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="bg-gradient-to-r from-orange-400 to-yellow-400 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20 w-max">
+                  <div className="bg-gradient-to-r from-orange-400 to-yellow-400 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg border-2 border-white/80">
                     Most Popular
                   </div>
                 </div>
               )}
 
               {/* Header */}
-              <div className={`bg-gradient-to-r ${plan.color} p-8 text-white text-center`}>
+              <div className={`bg-gradient-to-r ${plan.color} p-8 text-white text-center mt-8`}>
                 <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-2xl flex items-center justify-center">
                   <plan.icon className="w-8 h-8" />
                 </div>

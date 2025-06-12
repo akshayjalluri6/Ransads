@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
@@ -9,7 +8,7 @@ const Testimonials = () => {
       id: 1,
       name: "Sarah Johnson",
       position: "Marketing Director",
-      company: "TechCorp Solutions",
+      company: "Reliance Industries",
       content: "RansAds transformed our brand visibility completely! We saw a 300% increase in brand awareness within just 30 days. The mobile billboard concept is genius.",
       rating: 5,
       avatar: "SJ"
@@ -18,8 +17,8 @@ const Testimonials = () => {
       id: 2,
       name: "Michael Chen",
       position: "CEO",
-      company: "FoodieDelight",
-      content: "The reach we achieved with truck advertising was incredible. Our restaurant chain saw foot traffic increase by 150% in targeted cities. Highly recommend!",
+      company: "Flipkart",
+      content: "The reach we achieved with truck advertising was incredible. Our retail chain saw foot traffic increase by 150% in targeted cities. Highly recommend!",
       rating: 5,
       avatar: "MC"
     },
@@ -27,7 +26,7 @@ const Testimonials = () => {
       id: 3,
       name: "Emily Rodriguez",
       position: "Brand Manager",
-      company: "FitLife Gym",
+      company: "Swiggy",
       content: "Working with RansAds was seamless. Their team handled everything from design to deployment. The real-time analytics helped us optimize our campaigns perfectly.",
       rating: 5,
       avatar: "ER"
@@ -36,7 +35,7 @@ const Testimonials = () => {
       id: 4,
       name: "David Thompson",
       position: "Marketing Head",
-      company: "EcoClean Products",
+      company: "Tata Motors",
       content: "The ROI on our truck advertising campaign exceeded all expectations. We reached demographics that traditional advertising couldn't touch. Game-changer!",
       rating: 5,
       avatar: "DT"
@@ -45,7 +44,7 @@ const Testimonials = () => {
       id: 5,
       name: "Lisa Park",
       position: "CMO",
-      company: "StyleHub Fashion",
+      company: "Ola Cabs",
       content: "RansAds helped us launch our new collection with massive impact. The mobile billboards created buzz in every city they visited. Outstanding results!",
       rating: 5,
       avatar: "LP"
@@ -54,15 +53,15 @@ const Testimonials = () => {
       id: 6,
       name: "Robert Wilson",
       position: "Owner",
-      company: "AutoMax Dealership",
-      content: "The geographic targeting was spot-on. We saw immediate increases in showroom visits and test drives. The investment paid for itself within weeks.",
+      company: "Zomato",
+      content: "The geographic targeting was spot-on. We saw immediate increases in orders and app downloads. The investment paid for itself within weeks.",
       rating: 5,
       avatar: "RW"
     }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-orange-50 via-yellow-50 to-orange-50">
+    <section className="py-20 bg-gradient-to-br from-sky-50 via-blue-50 to-sky-100">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -92,13 +91,13 @@ const Testimonials = () => {
             >
               {/* Background Quote */}
               <div className="absolute top-4 right-4 opacity-10">
-                <Quote className="w-12 h-12 text-orange-500" />
+                <Quote className="w-12 h-12 text-sky-500" />
               </div>
 
               {/* Rating */}
               <div className="flex items-center space-x-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  <Star key={i} className="w-5 h-5 fill-sky-400 text-sky-400" />
                 ))}
               </div>
 
@@ -109,7 +108,7 @@ const Testimonials = () => {
 
               {/* Author */}
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-yellow-400 rounded-full flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-gradient-to-br from-sky-400 to-blue-400 rounded-full flex items-center justify-center text-white font-bold">
                   {testimonial.avatar}
                 </div>
                 <div>
@@ -120,7 +119,7 @@ const Testimonials = () => {
               </div>
 
               {/* Decorative Element */}
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-yellow-400"></div>
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-sky-400 to-blue-400"></div>
             </motion.div>
           ))}
         </div>

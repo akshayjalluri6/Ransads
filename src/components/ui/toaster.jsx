@@ -26,11 +26,11 @@ export function Toaster() {
 					<Toast key={id} variant={variant} icon={icon} {...props}>
 						<div className="flex items-center gap-3">
 							{icon}
-							<div className="grid gap-1">
-								{title && <ToastTitle>{title}</ToastTitle>}
-								{description && (
-									<ToastDescription>{description}</ToastDescription>
-								)}
+						<div className="grid gap-1">
+							{title && <ToastTitle>{title}</ToastTitle>}
+							{description && (
+								<ToastDescription>{description}</ToastDescription>
+							)}
 							</div>
 						</div>
 						{action}

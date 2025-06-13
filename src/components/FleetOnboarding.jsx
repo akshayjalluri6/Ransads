@@ -87,7 +87,7 @@ const FleetOnboarding = () => {
   ];
 
   return (
-    <section id="fleet-onboarding" className="py-20 bg-white">
+    <section id="fleet-onboarding" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -115,11 +115,11 @@ const FleetOnboarding = () => {
         >
           {benefits.map((benefit, index) => (
             <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-400 dark:from-sky-900 dark:to-blue-900 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <benefit.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-800">{benefit.title}</h3>
-              <p className="text-gray-600">{benefit.description}</p>
+              <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-sky-100">{benefit.title}</h3>
+              <p className="text-gray-600 dark:text-sky-200">{benefit.description}</p>
             </div>
           ))}
         </motion.div>
@@ -133,7 +133,7 @@ const FleetOnboarding = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Card className="shadow-xl">
+            <Card className="shadow-xl bg-white dark:bg-card">
               <CardHeader>
                 <CardTitle className="text-2xl gradient-text flex items-center space-x-2">
                   <Truck className="w-6 h-6" />
@@ -144,7 +144,7 @@ const FleetOnboarding = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                         Owner Name *
                       </label>
                       <Input
@@ -157,7 +157,7 @@ const FleetOnboarding = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                         Email Address *
                       </label>
                       <Input
@@ -174,7 +174,7 @@ const FleetOnboarding = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                         Phone Number *
                       </label>
                       <Input
@@ -188,7 +188,7 @@ const FleetOnboarding = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                         Company Name
                       </label>
                       <Input
@@ -203,7 +203,7 @@ const FleetOnboarding = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                         Number of Trucks *
                       </label>
                       <select
@@ -222,7 +222,7 @@ const FleetOnboarding = () => {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                         Truck Type *
                       </label>
                       <select
@@ -243,7 +243,7 @@ const FleetOnboarding = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                       Primary Routes *
                     </label>
                     <Textarea
@@ -257,7 +257,7 @@ const FleetOnboarding = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                       Trucking Experience
                     </label>
                     <select
@@ -276,7 +276,7 @@ const FleetOnboarding = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                       Weekly Availability
                     </label>
                     <select
@@ -294,7 +294,7 @@ const FleetOnboarding = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                       Additional Information
                     </label>
                     <Textarea
@@ -336,35 +336,35 @@ const FleetOnboarding = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="shadow-xl">
+            <Card className="shadow-xl bg-white dark:bg-card">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4 gradient-text">Requirements</h3>
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Valid commercial driver's license</span>
+                    <span className="text-gray-700 dark:text-sky-100">Valid commercial driver's license</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Clean driving record (3+ years)</span>
+                    <span className="text-gray-700 dark:text-sky-100">Clean driving record (3+ years)</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Commercial insurance coverage</span>
+                    <span className="text-gray-700 dark:text-sky-100">Commercial insurance coverage</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Truck in good condition</span>
+                    <span className="text-gray-700 dark:text-sky-100">Truck in good condition</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Regular routes (minimum 500 miles/week)</span>
+                    <span className="text-gray-700 dark:text-sky-100">Regular routes (minimum 500 miles/week)</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="shadow-xl bg-gradient-to-br from-sky-400 to-blue-400 text-white">
+            <Card className="shadow-xl bg-gradient-to-br from-sky-400 to-blue-400 dark:from-sky-900 dark:to-blue-900 text-white">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4">Earning Potential</h3>
                 <div className="space-y-3">
@@ -389,25 +389,25 @@ const FleetOnboarding = () => {
               </CardContent>
             </Card>
 
-            <Card className="shadow-xl">
+            <Card className="shadow-xl bg-white dark:bg-card">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4 gradient-text">Next Steps</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-sky-100 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-sky-600">1</div>
-                    <span className="text-gray-700">Submit your application</span>
+                    <div className="w-6 h-6 bg-sky-100 dark:bg-sky-900 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-sky-600 dark:text-sky-200">1</div>
+                    <span className="text-gray-700 dark:text-sky-100">Submit your application</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-sky-100 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-sky-600">2</div>
-                    <span className="text-gray-700">Background & vehicle verification</span>
+                    <div className="w-6 h-6 bg-sky-100 dark:bg-sky-900 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-sky-600 dark:text-sky-200">2</div>
+                    <span className="text-gray-700 dark:text-sky-100">Background & vehicle verification</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-sky-100 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-sky-600">3</div>
-                    <span className="text-gray-700">Contract signing & onboarding</span>
+                    <div className="w-6 h-6 bg-sky-100 dark:bg-sky-900 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-sky-600 dark:text-sky-200">3</div>
+                    <span className="text-gray-700 dark:text-sky-100">Contract signing & onboarding</span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-sky-100 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-sky-600">4</div>
-                    <span className="text-gray-700">Start earning with your first campaign</span>
+                    <div className="w-6 h-6 bg-sky-100 dark:bg-sky-900 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold text-sky-600 dark:text-sky-200">4</div>
+                    <span className="text-gray-700 dark:text-sky-100">Start earning with your first campaign</span>
                   </div>
                 </div>
               </CardContent>

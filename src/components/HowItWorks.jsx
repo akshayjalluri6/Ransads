@@ -31,7 +31,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-gray-50">
+    <section id="how-it-works" className="py-20 bg-gray-50 dark:bg-background">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -59,12 +59,12 @@ const HowItWorks = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="bg-white rounded-2xl p-8 shadow-lg card-hover text-center relative overflow-hidden">
+              <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-lg card-hover text-center relative overflow-hidden">
                 {/* Background Pattern */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-sky-100 to-blue-100 rounded-full -translate-y-10 translate-x-10 opacity-50"></div>
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-sky-100 to-blue-100 dark:from-sky-900 dark:to-blue-900 rounded-full -translate-y-10 translate-x-10 opacity-50"></div>
                 
                 {/* Step Number */}
-                <div className="absolute top-4 left-4 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center text-sm font-bold text-gray-600">
+                <div className="absolute top-4 left-4 w-8 h-8 bg-gray-100 dark:bg-sky-900 rounded-full flex items-center justify-center text-sm font-bold text-gray-600 dark:text-sky-200">
                   {index + 1}
                 </div>
 
@@ -73,8 +73,8 @@ const HowItWorks = () => {
                   <step.icon className="w-8 h-8 text-white" />
                 </div>
 
-                <h3 className="text-xl font-bold mb-4 text-gray-800">{step.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                <h3 className="text-xl font-bold mb-4 text-gray-800 dark:text-sky-100">{step.title}</h3>
+                <p className="text-gray-600 dark:text-sky-200 leading-relaxed">{step.description}</p>
               </div>
 
               {/* Connector Line */}
@@ -92,21 +92,21 @@ const HowItWorks = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <div className="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+          <div className="bg-white dark:bg-card rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 gradient-text">Ready to Get Started?</h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-sky-200 mb-6">
               Join hundreds of brands who have already transformed their marketing with mobile truck advertising.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
+              <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-sky-200">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span>No Setup Fees</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
+              <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-sky-200">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span>Real-time Tracking</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
+              <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-sky-200">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 <span>Flexible Campaigns</span>
               </div>

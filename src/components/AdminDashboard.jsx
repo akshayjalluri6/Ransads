@@ -142,40 +142,50 @@ const AdminDashboard = ({ onSignOut }) => {
   // User removal is not implemented for safety (requires Admin SDK)
 
   return (
-    <div style={{height: '100vh'}} className="min-h-screen w-full bg-gradient-to-br from-sky-950 via-blue-950 to-black dark:from-black dark:via-blue-950 dark:to-sky-900 p-0 font-sans relative overflow-hidden flex flex-col">
-      {/* Subtle animated background blobs */}
+    <div style={{height: '100vh'}} className="min-h-screen w-full bg-gradient-to-br from-sky-200 via-blue-300 to-blue-900 dark:from-black dark:via-blue-950 dark:to-sky-900 p-0 font-sans relative overflow-hidden flex flex-col">
+      {/* Multi-layered animated background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-sky-400/20 rounded-full blur-3xl animate-pulse-slow" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-900/30 rounded-full blur-2xl animate-pulse-slower" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-sky-400/20 rounded-full blur-3xl animate-pulse-slow" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-900/30 rounded-full blur-2xl animate-pulse-slower" />
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-gradient-to-br from-sky-300/30 to-blue-400/10 rounded-full blur-2xl animate-pulse" />
+        <div className="absolute left-0 top-1/2 w-60 h-60 bg-gradient-to-br from-blue-400/20 to-sky-200/10 rounded-full blur-2xl animate-float" />
+        <div className="absolute right-0 bottom-1/4 w-52 h-52 bg-gradient-to-br from-sky-400/20 to-blue-900/10 rounded-full blur-2xl animate-float" style={{animationDelay: '2s'}} />
+        {/* Subtle grid overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:32px_32px] dark:bg-[radial-gradient(circle,rgba(30,41,59,0.08)_1px,transparent_1px)]" />
       </div>
-      {/* Sign Out Button (fixed, higher z-index) */}
-      <div className="fixed top-6 right-6 z-50">
-        <button onClick={onSignOut} className="flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-red-500 to-red-700 text-white font-bold shadow-lg hover:scale-105 hover:shadow-red-400/40 transition-all duration-200 text-base">
+      {/* Sign out button - top right, never overlaps tabs */}
+      <div className="fixed top-6 right-8 z-50">
+        <button onClick={onSignOut} className="flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-red-500 to-red-700 text-white font-bold shadow-lg hover:scale-105 hover:shadow-red-400/40 transition-all duration-200 text-base focus:ring-2 focus:ring-red-400/40 focus:outline-none">
           Sign Out
         </button>
       </div>
       <div className="relative z-10 flex-1 flex flex-col w-full h-full p-0">
-        <div className="glass-effect rounded-none shadow-none w-full h-full border-0 backdrop-blur-xl flex flex-col p-0">
-          <div className="flex flex-col md:flex-row items-center justify-between mb-10 gap-4 w-full px-8 pt-12">
+        <div className="glass-effect rounded-none shadow-none w-full h-full border-0 backdrop-blur-2xl flex flex-col p-0">
+          <div className="flex flex-col md:flex-row items-center justify-between mb-10 gap-4 w-full px-8 pt-16 md:pt-12">
             <div className="flex items-center gap-4">
-              <Users className="w-12 h-12 text-sky-400 drop-shadow-lg" />
-              <h1 className="text-4xl font-extrabold drop-shadow-lg tracking-tight text-white">Admin Dashboard</h1>
+              <Users className="w-14 h-14 text-sky-400 drop-shadow-xl animate-float" />
+              <div>
+                <h1 className="text-4xl md:text-5xl font-extrabold drop-shadow-2xl tracking-tight gradient-text animate-pulse">Admin Dashboard</h1>
+                <div className="text-base md:text-lg text-sky-700 dark:text-sky-200 font-semibold mt-2 drop-shadow">Manage campaigns, fleet, and users in style</div>
+              </div>
             </div>
-            <div className="flex gap-2 mt-4 md:mt-0">
+            {/* Tabs - smaller, spaced, responsive, premium look */}
+            <div className="flex gap-2 md:gap-4 mt-6 md:mt-0 bg-white/40 dark:bg-sky-950/70 rounded-full px-2 py-1 shadow-xl backdrop-blur-2xl border border-sky-200/30 dark:border-sky-800/40">
               {TABS.map(tab => (
                 <button
                   key={tab.key}
                   onClick={() => setActiveTab(tab.key)}
-                  className={`flex items-center gap-2 px-6 py-2 rounded-full font-semibold text-lg shadow transition-all border-2 border-transparent hover:border-sky-400 focus-visible:ring-2 focus-visible:ring-sky-400 focus:outline-none ${activeTab === tab.key ? 'bg-gradient-to-r from-sky-400 to-blue-500 text-white shadow-lg scale-105' : 'bg-sky-100 dark:bg-sky-900 text-blue-900 dark:text-sky-200'}`}
+                  className={`flex items-center gap-2 px-5 md:px-7 py-2 md:py-2.5 rounded-full font-semibold text-base md:text-lg shadow transition-all border-2 border-transparent focus-visible:ring-2 focus-visible:ring-sky-400 focus:outline-none duration-200 neon-tab whitespace-nowrap ${activeTab === tab.key ? 'bg-gradient-to-r from-sky-400 to-blue-500 text-white shadow-lg scale-105 ring-2 ring-sky-300/30 dark:ring-blue-900/30' : 'bg-sky-100 dark:bg-sky-900 text-blue-900 dark:text-sky-200 hover:scale-105'}`}
+                  style={{minWidth: '120px'}}
                 >
-                  <tab.icon className="w-5 h-5" />
-                  {tab.label}
+                  <tab.icon className="w-5 h-5 md:w-6 md:h-6 animate-pulse" />
+                  <span className="hidden sm:inline">{tab.label}</span>
                 </button>
               ))}
             </div>
           </div>
           {/* Main tab content with scroll and top margin to avoid sign out button */}
-          <div className="flex-1 w-full overflow-y-auto px-8 pb-12 mt-8" style={{maxHeight: 'calc(100vh - 8rem)'}}>
+          <div className="flex-1 w-full overflow-y-auto px-4 md:px-12 pb-16 mt-4 md:mt-8">
             <div>
               {activeTab === 'users' ? (
                 <UserManagementTab

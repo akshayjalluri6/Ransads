@@ -63,7 +63,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-sky-50 to-blue-50">
+    <section id="contact" className="py-20 bg-gradient-to-br from-sky-50 to-blue-50 dark:from-sky-950 dark:to-blue-950">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -90,7 +90,7 @@ const ContactForm = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <Card className="shadow-xl">
+            <Card className="shadow-xl bg-white dark:bg-card">
               <CardHeader>
                 <CardTitle className="text-2xl gradient-text">Campaign Inquiry Form</CardTitle>
               </CardHeader>
@@ -98,7 +98,7 @@ const ContactForm = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                         Full Name *
                       </label>
                       <Input
@@ -111,7 +111,7 @@ const ContactForm = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                         Email Address *
                       </label>
                       <Input
@@ -128,7 +128,7 @@ const ContactForm = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                         Company Name *
                       </label>
                       <Input
@@ -141,7 +141,7 @@ const ContactForm = () => {
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                         Phone Number
                       </label>
                       <Input
@@ -157,7 +157,7 @@ const ContactForm = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                         Campaign Type
                       </label>
                       <select
@@ -173,7 +173,7 @@ const ContactForm = () => {
                       </select>
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                         Monthly Budget Range
                       </label>
                       <select
@@ -193,7 +193,7 @@ const ContactForm = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-sky-100 mb-2">
                       Campaign Goals & Message *
                     </label>
                     <Textarea
@@ -236,7 +236,7 @@ const ContactForm = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="shadow-xl">
+            <Card className="shadow-xl bg-white dark:bg-card">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-6 gradient-text">Get In Touch</h3>
                 <div className="space-y-4">

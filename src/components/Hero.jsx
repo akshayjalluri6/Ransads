@@ -12,29 +12,29 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-pattern pt-24 md:pt-0">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-pattern pt-24 md:pt-0 dark:bg-background">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img  
           className="w-full h-full object-cover opacity-20" 
           alt="Highway with trucks carrying advertising banners"
          src="https://images.unsplash.com/photo-1537516392097-1b2a028ddec3" />
-        <div className="absolute inset-0 hero-gradient opacity-80"></div>
+        <div className="absolute inset-0 hero-gradient opacity-80 dark:opacity-90"></div>
       </div>
 
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 animate-float">
-        <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
+        <div className="w-16 h-16 bg-white/20 dark:bg-sky-900/40 rounded-full flex items-center justify-center">
           <TrendingUp className="w-8 h-8 text-white" />
         </div>
       </div>
       <div className="absolute top-40 right-20 animate-float" style={{ animationDelay: '2s' }}>
-        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+        <div className="w-12 h-12 bg-white/20 dark:bg-sky-900/40 rounded-full flex items-center justify-center">
           <Users className="w-6 h-6 text-white" />
         </div>
       </div>
       <div className="absolute bottom-40 left-20 animate-float" style={{ animationDelay: '4s' }}>
-        <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center">
+        <div className="w-14 h-14 bg-white/20 dark:bg-sky-900/40 rounded-full flex items-center justify-center">
           <MapPin className="w-7 h-7 text-white" />
         </div>
       </div>
@@ -77,7 +77,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-sky-600 text-lg px-8 py-4 rounded-full font-bold"
+              className="border-sky-600 text-sky-600 hover:bg-sky-50 hover:text-sky-800 dark:border-white dark:text-white dark:hover:bg-white/10 dark:hover:text-sky-400 text-lg px-8 py-4 rounded-full font-bold transition-colors duration-200"
               onClick={() => scrollToSection('how-it-works')}
             >
               <Play className="mr-2 w-5 h-5" />

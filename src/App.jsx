@@ -24,7 +24,7 @@ function App() {
     <Suspense fallback={<div className="min-h-screen flex items-center justify-center text-2xl">Loading...</div>}>
       <Routes>
         <Route path="/" element={
-          <div className="min-h-screen bg-white dark:bg-background">
+          <div className="min-h-screen bg-background">
             <Header />
             <Hero />
             <HowItWorks />
@@ -42,7 +42,7 @@ function App() {
         <Route path="/services/custom-solutions" element={<CustomSolutions />} />
         <Route path="/services/analytics-reporting" element={<AnalyticsReporting />} />
         <Route path="/services/fleet-management" element={<FleetManagement />} />
-        <Route path="/fleet" element={<><Header /><FleetOnboarding /><Footer /></>} />
+        <Route path="/fleet" element={<div className="min-h-screen bg-background"><Header /><FleetOnboarding /><Footer /></div>} />
         <Route path="/admin" element={<AdminAuth />} />
         <Route path="*" element={<div className="min-h-screen flex flex-col items-center justify-center text-2xl">404 - Page Not Found</div>} />
       </Routes>

@@ -8,9 +8,9 @@ const Footer = () => {
 
   const handleNavClick = (sectionId) => {
     if (location.pathname === '/' && document.getElementById(sectionId)) {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
       navigate('/', { state: { scrollTo: sectionId } });

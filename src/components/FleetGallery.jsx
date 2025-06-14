@@ -66,7 +66,7 @@ const FleetGallery = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Our <span className="gradient-text">Fleet</span> in Action
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-sky-300 max-w-3xl mx-auto">
             See how brands are making their mark on the road. Our premium truck fleet 
             delivers your message with maximum impact and visibility.
           </p>
@@ -172,7 +172,7 @@ const FleetGallery = () => {
         >
           <div className="bg-gradient-to-r from-sky-50 to-blue-50 dark:from-sky-950 dark:to-blue-950 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 gradient-text">Your Brand Could Be Next</h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-sky-300 mb-6">
               Join the mobile advertising revolution and see your brand travel the highways, 
               reaching millions of potential customers every day.
             </p>
@@ -183,11 +183,11 @@ const FleetGallery = () => {
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold gradient-text mb-2">50+</div>
-                <div className="text-gray-600">Cities Covered</div>
+                <div className="text-gray-600 dark:text-sky-300">Cities Covered</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold gradient-text mb-2">1M+</div>
-                <div className="text-gray-600">Daily Views</div>
+                <div className="text-gray-600 dark:text-sky-300">Daily Views</div>
               </div>
             </div>
           </div>

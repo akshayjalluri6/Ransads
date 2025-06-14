@@ -75,7 +75,7 @@ const ContactForm = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Start Your <span className="gradient-text">Campaign</span> Today
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-sky-200 max-w-3xl mx-auto">
             Ready to transform your brand visibility? Get in touch with our team 
             and let's create a mobile advertising campaign that drives results.
           </p>
@@ -105,7 +105,7 @@ const ContactForm = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        placeholder="John Doe"
+                        placeholder="Ajay Kumar"
                         required
                         className="w-full"
                       />
@@ -119,7 +119,7 @@ const ContactForm = () => {
                         type="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        placeholder="john@company.com"
+                        placeholder="ajaykumar@company.com"
                         required
                         className="w-full"
                       />
@@ -149,7 +149,7 @@ const ContactForm = () => {
                         type="tel"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+91 (9876543210)"
                         className="w-full"
                       />
                     </div>
@@ -246,8 +246,8 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="font-medium text-gray-800">Phone</div>
-                      <div className="text-gray-600">+1 (555) 123-RANS</div>
-                      <div className="text-gray-600">+1 (555) 123-7267</div>
+                      <div className="text-gray-600 dark:text-sky-200">+1 (555) 123-RANS</div>
+                      <div className="text-gray-600 dark:text-sky-200">+1 (555) 123-7267</div>
                     </div>
                   </div>
 
@@ -257,8 +257,8 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="font-medium text-gray-800">Email</div>
-                      <div className="text-gray-600">hello@ransads.com</div>
-                      <div className="text-gray-600">sales@ransads.com</div>
+                      <div className="text-gray-600 dark:text-sky-200">hello@ransads.com</div>
+                      <div className="text-gray-600 dark:text-sky-200">sales@ransads.com</div>
                     </div>
                   </div>
 
@@ -268,8 +268,8 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="font-medium text-gray-800">Office</div>
-                      <div className="text-gray-600">123 Marketing Street</div>
-                      <div className="text-gray-600">Los Angeles, CA 90210</div>
+                      <div className="text-gray-600 dark:text-sky-200">123 Marketing Street</div>
+                      <div className="text-gray-600 dark:text-sky-200">Los Angeles, CA 90210</div>
                     </div>
                   </div>
 
@@ -279,8 +279,8 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="font-medium text-gray-800">Business Hours</div>
-                      <div className="text-gray-600">Mon - Fri: 9AM - 6PM PST</div>
-                      <div className="text-gray-600">Sat: 10AM - 4PM PST</div>
+                      <div className="text-gray-600 dark:text-sky-200">Mon - Fri: 9AM - 6PM PST</div>
+                      <div className="text-gray-600 dark:text-sky-200">Sat: 10AM - 4PM PST</div>
                     </div>
                   </div>
                 </div>

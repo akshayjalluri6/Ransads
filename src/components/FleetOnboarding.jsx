@@ -99,7 +99,7 @@ const FleetOnboarding = () => {
           <h2 className="text-3xl xs:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
             Join Our <span className="gradient-text">Fleet</span> Network
           </h2>
-          <p className="text-base xs:text-lg md:text-xl text-gray-600 max-w-md md:max-w-3xl mx-auto leading-snug md:leading-relaxed">
+          <p className="text-base xs:text-lg md:text-xl text-gray-600 dark:text-sky-200 max-w-md md:max-w-3xl mx-auto leading-snug md:leading-relaxed">
             <span className="hidden md:inline">Turn your truck into a mobile billboard and earn extra revenue. Join hundreds of truck owners who are already monetizing their routes.</span>
             <span className="inline md:hidden">Earn more by advertising on your truck. Join our fleet today!</span>
           </p>

@@ -85,10 +85,10 @@ const Header = () => {
             transition={{ duration: 0.5 }}
             onClick={() => { navigate('/'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
-            <div className="w-10 h-10 hero-gradient rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 hero-gradient dark:bg-orange-500 rounded-lg flex items-center justify-center transition-colors duration-300">
               <Truck className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold gradient-text ml-1">RansAds</span>
+            <span className="text-2xl font-bold gradient-text dark:gradient-text-orange ml-1 transition-colors duration-300">RansAds</span>
           </motion.div>
 
           {/* Desktop Navigation */}

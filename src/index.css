@@ -74,6 +74,20 @@
   background-clip: text;
 }
 
+.gradient-text-orange {
+  background: linear-gradient(135deg, #fb923c, #f59e42, #fbbf24, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .gradient-text-orange {
+  background: linear-gradient(135deg, #fb923c, #f59e42, #fbbf24, #f97316);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .hero-gradient {
   background: linear-gradient(135deg, #38bdf8 0%, #2563eb 40%, #1e3a8a 80%, #0a192f 100%);
 }

@@ -78,7 +78,7 @@ const Testimonials = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             What Our <span className="gradient-text">Clients</span> Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-sky-300 max-w-3xl mx-auto">
             Don't just take our word for it. Here's what brands are saying about 
             their success with RansAds mobile advertising campaigns.
           </p>
@@ -182,15 +182,15 @@ const Testimonials = () => {
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold gradient-text mb-1">250%</div>
-                <div className="text-sm text-gray-600">Avg. ROI Increase</div>
+                <div className="text-sm text-gray-600 dark:text-sky-300">Avg. ROI Increase</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold gradient-text mb-1">500+</div>
-                <div className="text-sm text-gray-600">Happy Clients</div>
+                <div className="text-sm text-gray-600 dark:text-sky-300">Happy Clients</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold gradient-text mb-1">24/7</div>
-                <div className="text-sm text-gray-600">Campaign Support</div>
+                <div className="text-sm text-gray-600 dark:text-sky-300">Campaign Support</div>
               </div>
             </div>
           </div>

@@ -43,7 +43,7 @@ const HowItWorks = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             How <span className="gradient-text">RansAds</span> Works
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-sky-200 max-w-3xl mx-auto">
             From concept to campaign, we make truck advertising simple and effective. 
             Here's how we transform your brand into a mobile marketing powerhouse.
           </p>

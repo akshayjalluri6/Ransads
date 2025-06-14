@@ -84,7 +84,7 @@ const Pricing = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Choose Your <span className="gradient-text">Campaign</span> Size
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-sky-300 max-w-3xl mx-auto">
             Flexible pricing plans designed to fit every budget and campaign goal. 
             Start small or go big - we've got the perfect solution for your brand.
           </p>
@@ -161,7 +161,7 @@ const Pricing = () => {
         >
           <div className="bg-gradient-to-r from-orange-50 to-yellow-50 dark:from-sky-950 dark:to-blue-950 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold mb-4 gradient-text">Need a Custom Solution?</h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-sky-300 mb-6">
               Have specific requirements or need a larger fleet? We create custom packages 
               tailored to your unique campaign needs and budget.
             </p>
@@ -172,11 +172,11 @@ const Pricing = () => {
               </div>
               <div className="text-center">
                 <div className="text-lg font-bold text-gray-800 mb-1">Flexible Billing</div>
-                <div className="text-sm text-gray-600">Monthly, quarterly, or annual</div>
+                <div className="text-sm text-gray-600 dark:text-sky-300">Monthly, quarterly, or annual</div>
               </div>
               <div className="text-center">
                 <div className="text-lg font-bold text-gray-800 mb-1">Enterprise Support</div>
-                <div className="text-sm text-gray-600">Dedicated account management</div>
+                <div className="text-sm text-gray-600 dark:text-sky-300">Dedicated account management</div>
               </div>
             </div>
             <Button 

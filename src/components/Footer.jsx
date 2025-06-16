@@ -106,22 +106,22 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  <span className="block text-gray-400 dark:text-gray-300">+1 (555) 123-RANS</span>
-                  <span className="block text-gray-400 dark:text-gray-300">+1 (555) 123-7267</span>
+                  <span className="block text-gray-400 dark:text-gray-300">8008088866</span>
+                  <span className="block text-gray-400 dark:text-gray-300">7780128530</span>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  <span className="block text-gray-400 dark:text-gray-300">hello@ransads.com</span>
-                  <span className="block text-gray-400 dark:text-gray-300">sales@ransads.com</span>
+                  <span className="block text-gray-400 dark:text-gray-300">ransads9091@gmail.com</span>
+                  <span className="block text-gray-400 dark:text-gray-300">dineshnagaram5@gmail.com</span>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
                 <div>
-                  <span className="block text-gray-400 dark:text-gray-300">123 Marketing Street</span>
-                  <span className="block text-gray-400 dark:text-gray-300">Los Angeles, CA 90210</span>
+                  <span className="block text-gray-400 dark:text-gray-300">Head Office : Rans Rainbow Building, Hyderabad, Telangana</span>
+                  <span className="block text-gray-400 dark:text-gray-300">Sales : Rans Transports, Bangalore</span>
                 </div>
               </div>
             </div>

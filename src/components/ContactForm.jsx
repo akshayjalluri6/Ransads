@@ -246,8 +246,8 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="font-medium text-gray-800">Phone</div>
-                      <div className="text-gray-600 dark:text-sky-200">+1 (555) 123-RANS</div>
-                      <div className="text-gray-600 dark:text-sky-200">+1 (555) 123-7267</div>
+                      <div className="text-gray-600 dark:text-sky-200">8008088866</div>
+                      <div className="text-gray-600 dark:text-sky-200">7780128530</div>
                     </div>
                   </div>
 
@@ -257,8 +257,8 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="font-medium text-gray-800">Email</div>
-                      <div className="text-gray-600 dark:text-sky-200">hello@ransads.com</div>
-                      <div className="text-gray-600 dark:text-sky-200">sales@ransads.com</div>
+                      <div className="text-gray-600 dark:text-sky-200">ransads9091@gmail.com</div>
+                      <div className="text-gray-600 dark:text-sky-200">dineshnagaram5@gmail.com</div>
                     </div>
                   </div>
 
@@ -268,8 +268,8 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <div className="font-medium text-gray-800">Office</div>
-                      <div className="text-gray-600 dark:text-sky-200">123 Marketing Street</div>
-                      <div className="text-gray-600 dark:text-sky-200">Los Angeles, CA 90210</div>
+                      <div className="text-gray-600 dark:text-sky-200">Head Office : Rans Rainbow Building, Hyderabad, Telangana</div>
+                      <div className="text-gray-600 dark:text-sky-200">Sales : Rans Transports, Bangalore</div>
                     </div>
                   </div>
 

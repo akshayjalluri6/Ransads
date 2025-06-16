@@ -8,12 +8,14 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [atTop, setAtTop] = useState(true);
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
+      setAtTop(window.scrollY < 4);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -35,12 +37,12 @@ const Header = () => {
   }, [location]);
 
   const handleNavClick = (sectionId) => {
+    setIsMenuOpen(false);
     if (location.pathname === '/' && document.getElementById(sectionId)) {
       scrollToSection(sectionId);
     } else {
       navigate('/', { state: { scrollTo: sectionId } });
     }
-    setIsMenuOpen(false);
   };
 
   useEffect(() => {
@@ -58,22 +60,22 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMenuOpen(false);
   };
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 glass-effect transition-all duration-700 ${scrolled ? 'navbar-pill' : ''}`}
+      className={`fixed left-0 right-0 z-50 glass-effect transition-all duration-700 ${scrolled && !isMenuOpen ? 'navbar-pill' : ''}`}
       style={{
-        left: scrolled ? '50%' : '0',
-        right: scrolled ? 'auto' : '0',
-        transform: scrolled
-          ? 'translate(-50%, 32px) scale(0.96)'
+        top: scrolled && !isMenuOpen && !atTop ? '32px' : '0',
+        left: scrolled && !isMenuOpen ? '50%' : '0',
+        right: scrolled && !isMenuOpen ? 'auto' : '0',
+        transform: scrolled && !isMenuOpen
+          ? 'translate(-50%, 0) scale(0.96)'
           : 'translate(0, 0) scale(1)',
-        boxShadow: scrolled
+        boxShadow: scrolled && !isMenuOpen
           ? '0 16px 48px 0 rgba(30,41,59,0.18), 0 2px 8px 0 rgba(56,189,248,0.10)'
           : undefined,
-        transition: 'transform 0.7s cubic-bezier(0.4,0,0.2,1), left 0.7s cubic-bezier(0.4,0,0.2,1), box-shadow 0.7s cubic-bezier(0.4,0,0.2,1)',
+        transition: 'top 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1), left 0.7s cubic-bezier(0.4,0,0.2,1), box-shadow 0.7s cubic-bezier(0.4,0,0.2,1)',
       }}
     >
       <nav className="container mx-auto px-4 py-4">
@@ -149,7 +151,7 @@ const Header = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden mt-4 pb-4"
+              className="md:hidden mt-4 pb-4 z-50 relative pt-4"
             >
               <div className="flex flex-col space-y-4">
                 <button 

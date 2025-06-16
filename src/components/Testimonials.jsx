@@ -11,57 +11,48 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
+      name: "Gayatri Vasudeva Yadav",
       position: "Marketing Director",
       company: "Reliance Industries",
       content: "RansAds transformed our brand visibility completely! We saw a 300% increase in brand awareness within just 30 days. The mobile billboard concept is genius.",
       rating: 5,
-      avatar: "SJ"
+      avatar: "GY"
     },
     {
       id: 2,
-      name: "Michael Chen",
+      name: "Kalyan Krishnamurthy",
       position: "CEO",
       company: "Flipkart",
       content: "The reach we achieved with truck advertising was incredible. Our retail chain saw foot traffic increase by 150% in targeted cities. Highly recommend!",
       rating: 5,
-      avatar: "MC"
+      avatar: "KM"
     },
     {
       id: 3,
-      name: "Emily Rodriguez",
+      name: "Ishita Mehta",
       position: "Brand Manager",
       company: "Swiggy",
       content: "Working with RansAds was seamless. Their team handled everything from design to deployment. The real-time analytics helped us optimize our campaigns perfectly.",
       rating: 5,
-      avatar: "ER"
+      avatar: "IM"
     },
     {
       id: 4,
-      name: "David Thompson",
+      name: "Vivek Srivatsa",
       position: "Marketing Head",
       company: "Tata Motors",
       content: "The ROI on our truck advertising campaign exceeded all expectations. We reached demographics that traditional advertising couldn't touch. Game-changer!",
       rating: 5,
-      avatar: "DT"
+      avatar: "VS"
     },
     {
       id: 5,
-      name: "Lisa Park",
+      name: "Anshul Khandelwal",
       position: "CMO",
       company: "Ola Cabs",
       content: "RansAds helped us launch our new collection with massive impact. The mobile billboards created buzz in every city they visited. Outstanding results!",
       rating: 5,
-      avatar: "LP"
-    },
-    {
-      id: 6,
-      name: "Robert Wilson",
-      position: "Owner",
-      company: "Zomato",
-      content: "The geographic targeting was spot-on. We saw immediate increases in orders and app downloads. The investment paid for itself within weeks.",
-      rating: 5,
-      avatar: "RW"
+      avatar: "AK"
     }
   ];
 

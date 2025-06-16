@@ -8,14 +8,13 @@ const Pricing = () => {
     {
       name: "Basic",
       icon: Zap,
-      price: "$2,999",
-      period: "/month",
-      description: "Perfect for small businesses and local campaigns",
+      price: "₹5,999",
+      period: "+ GST",
+      description: "For fleets with 1+ trucks, intercity/state/India coverage, and essential analytics.",
       features: [
-        "5 trucks in your fleet",
-        "Local city coverage",
+        ">1 Truck in your Fleet",
+        "Intercity/ State/India coverage",
         "Basic analytics dashboard",
-        "Standard ad design support",
         "Email support",
         "30-day campaign minimum"
       ],
@@ -25,12 +24,12 @@ const Pricing = () => {
     {
       name: "Standard",
       icon: Star,
-      price: "$5,999",
-      period: "/month",
-      description: "Ideal for growing brands and regional reach",
+      price: "₹4,999",
+      period: "/vehicle + GST",
+      description: "For fleets of 5 trucks, multi-city/state/India coverage, and advanced analytics.",
       features: [
-        "15 trucks in your fleet",
-        "Multi-city coverage",
+        "5 trucks in your fleet",
+        "Multi-city/state/ India coverage",
         "Advanced analytics & reporting",
         "Premium ad design support",
         "Priority phone & email support",
@@ -44,11 +43,11 @@ const Pricing = () => {
     {
       name: "Premium",
       icon: Crown,
-      price: "$12,999",
-      period: "/month",
-      description: "For enterprise brands seeking maximum impact",
+      price: "₹4,999",
+      period: "/vehicle/month",
+      description: "For fleets of 15+ trucks, national highway coverage, and enterprise analytics.",
       features: [
-        "50+ trucks in your fleet",
+        "15+ trucks in your fleet",
         "National highway coverage",
         "Enterprise analytics suite",
         "Dedicated design team",

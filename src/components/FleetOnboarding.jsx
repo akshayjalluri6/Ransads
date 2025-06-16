@@ -87,7 +87,7 @@ const FleetOnboarding = () => {
   ];
 
   return (
-    <section id="fleet-onboarding" className="py-20 bg-background">
+    <section id="fleet-onboarding" className="pt-[88px] md:pt-[112px] py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
